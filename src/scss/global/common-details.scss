@@ -1,0 +1,27 @@
+.box {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+
+    &__container {
+        max-width: 1170px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.common {
+
+    &__title {
+        @include font(32px, normal, 38px, $fontGeorgia);
+
+        color: $colorCommonTitle;
+        text-align: center;
+    }
+
+    &__description {
+        @include font(16px, normal, 28px, $fontBase);
+
+        color: $colorCommonText;
+    }
+}

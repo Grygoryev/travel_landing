@@ -1,0 +1,18 @@
+.intro {
+    min-height: 700px;
+    background: url("../img/bg-photo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &__title {
+        @include font(200px, normal, 1, $fontTimes);
+
+        color: $colorWhite;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
