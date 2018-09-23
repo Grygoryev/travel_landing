@@ -1,34 +1,33 @@
 -
   var advantagesItems = [
      {
-        icon: 'src',
+        icon: 'img/route-icon.svg',
         number: '1,920',
         itemName: 'Trips'
     },
     {
-        icon: 'src',
+        icon: 'img/restaurant-icon.svg',
         number: '271',
         itemName: 'Venues'
     },
     {
-        icon: 'src',
+        icon: 'img/transport-icon.svg',
         number: '3, 321',
         itemName: 'Tickets Sold'
     },
     {
-        icon: 'src',
+        icon: 'img/speaks-icon.svg',
         number: '2,912',
         itemName: 'Reviews'
     }
   ]
 
-.advantages.common.box
-    .box__container
-        .common__title Why you'll love vacation in Cuba
-        .common__text It always had the allure a forbidden fruit. I love it for its uniqueness, creativity and survivalist spirit. I love it because, despite 60 years of setbacks, it remains an upbeat and open place. Walk down the street with a Cuban friend and, within one block, you’ll have received five handshakes, four kisses, three greetings of ‘dime hermano!’ and at least two invites into someone’s house.
-        .advantages__main 
-            for item in advantagesItems
-                .advantage
-                    .advantage__icon #{item.icon}
-                    .advantage__number #{item.number}
-                    .advantage__name #{item.itemName}
+.advantages.common.container
+    .common__title Why you'll love vacation in Cuba
+    .common__description It always had the allure a forbidden fruit. I love it for its uniqueness, creativity and survivalist spirit. I love it because, despite 60 years of setbacks, it remains an upbeat and open place. Walk down the street with a Cuban friend and, within one block, you’ll have received five handshakes, four kisses, three greetings of ‘dime hermano!’ and at least two invites into someone’s house.
+    .advantages__main 
+        for item in advantagesItems
+            .advantage
+                img(src=item.icon).advantage__icon
+                .advantage__number #{item.number}
+                .advantage__name #{item.itemName}

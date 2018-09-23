@@ -1,12 +1,17 @@
 head
   link(rel="stylesheet" href="css/main.css")
+  link(rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css")
   meta(name='viewport', content='width=device-width, initial-scale=1')
   meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
   meta(http-equiv='x-ua-compatible', content='ie=edge')
 body
     include ./sections/intro.pug
+    include ./blocks/navbar.pug    
     include ./sections/why-love-cuba.pug
-    include ./sections/cuba-about.pug
-    include ./sections/cuba-in-photos.pug
+    include ./sections/cuba-about.pug   
+    include ./sections/cuba-autos.pug   
+    include ./sections/cuba-photos.pug
     include ./sections/footer.pug
+
+    script(src="js/intro.js")
     

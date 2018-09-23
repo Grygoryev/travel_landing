@@ -1,0 +1,53 @@
+.about-cuba {
+    padding-top: 83px;
+    padding-bottom: 125px;
+}
+
+.cuba-place {
+    position: relative;
+
+    &__photo {
+        max-width: 565px;
+        width: 100%;
+    }
+}
+
+.cuba-place-card {
+    padding: 40px;
+    max-width: 470px;
+    width: 100%;
+    max-height: 290px;
+    box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.2);
+    background-color: $colorWhite;
+    position: absolute;
+    top: 70px;
+    left: 43%;
+
+    &::before {
+        content: url("../img/place-card-figure.svg");
+        position: absolute;
+        top: 19px;
+        right: 19px;
+    }
+
+    &::after {
+        content: url("../img/place-card-figure.svg");
+        position: absolute;
+        bottom: 19px;
+        left: 19px;
+        transform: rotate(180deg);
+    }
+
+    &__title {
+        @include font(remy(24), normal, 1, $fontGeorgia);
+
+        margin-bottom: 16px;
+        color: $colorCommonTitle;
+    }
+
+    &__description {
+        @include font(remy(16), normal, 28px, $fontBase);
+    
+        color: $colorCommonText;
+    }
+}

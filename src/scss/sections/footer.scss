@@ -1,0 +1,45 @@
+.footer {
+    background-color: $colorGray;
+    min-height: 314px;
+    padding: 56px 135px 32px;
+    position: relative;
+
+    &__container {
+        @include flex(space-between)
+    }
+
+    &__copyright {
+        text-align: center;
+        position: absolute;
+        bottom: 32px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #505050;
+
+        @include font(remy(14), normal, 19px);
+    }
+}
+
+.footer-section {
+
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        color: #4E5665;
+
+        @include font(remy(15), normal, 20px);
+    }
+
+    &__link {
+        @include font(remy(14), normal, 19px);
+
+        margin-bottom: 8px;
+        color: #505050;
+        display: block;
+
+        &:hover {
+            color: $colorYellowSandy;
+            text-decoration: underline;
+        }
+    }
+}

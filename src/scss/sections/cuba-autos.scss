@@ -1,0 +1,20 @@
+.cuba-autos {
+
+    &__photo-container {
+        max-width: 1170px;
+        width: 100%;
+        position: relative;
+        margin: 0 auto 60px;
+
+        &::after {
+            content: url("../img/smooth-line.png");
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+        }
+    }
+
+    &__cadillac-photo {
+        width: 100%;
+    }
+}

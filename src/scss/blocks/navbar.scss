@@ -1,5 +1,34 @@
 .navbar {
-    min-height: 63px;
+    width: 100%;
+    border-bottom: 1px solid $colorLightGray;
 
-    
+    @include flex(center, center);
+
+    &__container {
+        max-width: 636px;
+        width: 100%;
+
+        @include flex(space-between, center);
+    }
+    &__item {
+        @include font(remy(14), normal, 63px, $fontBase);
+
+        color: $colorNavItem;
+
+        &_active {
+            color: $colorNavItem--active;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                background-color: $colorYellowSandy;
+                bottom: 0;
+                left: 0;
+            }
+
+        }
+    }
 }

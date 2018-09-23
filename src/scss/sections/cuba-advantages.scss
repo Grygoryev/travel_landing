@@ -1,0 +1,39 @@
+.advantages {
+    padding-top: 83px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid $colorLightGray;
+
+    &__main {
+        @include flex(space-between, center);
+    
+        max-width: 813px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.advantage {
+    @include flex(center, center, column nowrap);
+
+    &__icon {
+        margin-bottom: 36px;
+        transition: transform 0.4s;
+
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+
+    &__number {
+        color: $colorCommonTitle;
+        margin-bottom: 4px;
+
+        @include font(remy(22), normal, 30px);
+    }
+
+    &__name {
+        color: $colorCommonText;
+
+        @include font(remy(14), normal);
+    }
+}

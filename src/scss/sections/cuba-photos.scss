@@ -1,0 +1,14 @@
+.cuba-photos {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.cuba-gallery {
+    &__item {
+        box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.15);
+        border-radius: 4px; 
+        max-width: 640px;
+        margin: 0 auto;
+        display: block;
+    }
+}

@@ -2,26 +2,62 @@
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
+}
 
-    &__container {
-        max-width: 1170px;
-        width: 100%;
-        margin: 0 auto;
-    }
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .common {
 
     &__title {
-        @include font(32px, normal, 38px, $fontGeorgia);
+        @include font(remy(32), normal, 38px, $fontGeorgia);
 
         color: $colorCommonTitle;
         text-align: center;
+        margin-bottom: 42px;
+
+        &_cuba-autos {
+            margin-bottom: 111px
+        }
     }
 
     &__description {
-        @include font(16px, normal, 28px, $fontBase);
+        @include font(remy(16), normal, 28px, $fontBase);
 
         color: $colorCommonText;
+        text-align: justify;
+        margin-bottom: 63px;
+
+        &_cuba-about {
+            margin-bottom: 150px;
+        }
+
+        &_cuba-autos {
+            margin-bottom: 0;
+            padding-bottom: 80px;
+            border-bottom: 1px solid $colorLightGray;
+        }
+
+        &_cuba-photos {
+            position: relative;
+            margin-bottom: 56px;
+            padding-bottom: 48px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 1px;
+                width: 270px;
+                background-color: $colorLightGray;
+            }
+        }
     }
 }
