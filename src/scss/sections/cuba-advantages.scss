@@ -10,6 +10,18 @@
         width: 100%;
         margin: 0 auto;
     }
+
+    &__read-more-btn {
+        @include font(remy(16), normal, 28px, $fontBase);
+
+        color: $colorYellowSandy;
+        padding-left: 5px;
+
+        &:hover {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
 }
 
 .advantage {

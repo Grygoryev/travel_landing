@@ -15,3 +15,9 @@
 @function remy($pxsize) {
     @return ($pxsize/16)+rem;
 }
+
+@include respond-to-max($screenWidth) {
+    @media (max-width: $screenWidth) {
+        @content
+    }
+}

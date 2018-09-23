@@ -41,5 +41,35 @@
             color: $colorYellowSandy;
             text-decoration: underline;
         }
+
+        &_chat, 
+        &_facebook, 
+        &_instagram {
+            padding-left: 30px;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &_chat {
+            &::before {
+                content: url("../img/chat-logo.svg");
+            }
+        }
+        &_facebook {
+            &::before {
+                content: url("../img/facebook-logo.svg");
+            }
+        }
+        &_instagram {
+            &::before {
+                content: url("../img/instagram-logo.svg");
+            }
+        }
     }
 }

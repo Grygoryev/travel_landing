@@ -4,11 +4,87 @@
 }
 
 .cuba-gallery {
+    position: relative;
+    min-height: remy(500);
+
+    &__forward-btn,
+    &__backward-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: remy(80);
+        height: remy(80);
+        border-radius: 50%;
+        background-color: $colorYellowSandy;
+        z-index: 5;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $colorYellowSandy--hover;
+        }
+    }
+
+    &__forward-btn {
+        right: 25.138%;
+
+        &::after {
+            content: url("../img/arrow-icon.svg");
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &__backward-btn {
+        left: 25.138%;
+
+        &::after {
+            content: url("../img/arrow-icon.svg");
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(180deg);
+        }
+    }
+
     &__item {
         box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.15);
         border-radius: 4px; 
-        max-width: 640px;
-        margin: 0 auto;
-        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        &:nth-of-type(1) {
+            max-width: 33.333%;
+            max-height: remy(315);
+            left: 0;
+            z-index: 2;
+        }
+        &:nth-of-type(2) {
+            max-width: 38.888%;
+            max-height: remy(420);
+            left: 12.5%;
+            z-index: 3;
+        }
+        &:nth-of-type(3) {
+            max-width: 44.444%;
+            max-height: remy(480);
+            left: 27.777%;
+            z-index: 4;
+        }
+        &:nth-of-type(4) {
+            max-width: 38.888%;
+            max-height: remy(420);
+            right: 12.5%;
+            z-index: 3;
+        }
+        &:nth-of-type(5) {
+            max-width: 33.333%;
+            right: 0;
+            z-index: 2;
+            max-height: remy(315);
+        }
     }
 }

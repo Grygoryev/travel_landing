@@ -3,9 +3,15 @@
         .common__title Cuba in Photos
         .common__description.common__description_cuba-photos When you think of Carribean, you’re probably not thinking of Cuba. It’s the lone acacia silhouetted against a horizon stretching into eternity. It’s the snow-capped mountain almost on the equator and within sight of harsh deserts. It’s the lush, palm-fringed coastline of the Indian Ocean, it’s the Great Rift Valley that once threatened to tear the continent asunder, and it’s the dense forests reminiscent of the continent’s heart. In short, Kenya is a country of epic landforms that stir our deepest longings for this very special continent.
     .cuba-gallery.box
-        img(src="img/galleryslide1.jpg").cuba-gallery__item
-        img(src="img/galleryslide2.jpg").cuba-gallery__item
-        img(src="img/galleryslide3.jpg").cuba-gallery__item
-        img(src="img/galleryslide4.jpg").cuba-gallery__item
-        img(src="img/galleryslide5.jpg").cuba-gallery__item
+        .cuba-gallery__container#cuba-gallery-slider
+            img(src="img/galleryslide1.jpg").cuba-gallery__item
+            img(src="img/galleryslide2.jpg").cuba-gallery__item
+            img(src="img/galleryslide3.jpg").cuba-gallery__item
+            img(src="img/galleryslide4.jpg").cuba-gallery__item
+            img(src="img/galleryslide5.jpg").cuba-gallery__item
+            
+        .cuba-gallery__forward-btn(onclick="slideForward()")
+        .cuba-gallery__backward-btn(onclick="slideBackward()")
+
+        
         
