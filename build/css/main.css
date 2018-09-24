@@ -1,0 +1,546 @@
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 16px;
+  overflow-x: hidden; }
+  @media (max-width: 1200px) {
+    html {
+      font-size: 15px; } }
+  @media (max-width: 375px) {
+    html {
+      font-size: 14px; } }
+
+body {
+  overflow-x: hidden; }
+
+body, h1, h2, h3, h4, h5, h6, p, span, i,
+figure, a {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+.box {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto; }
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 100px;
+  padding-right: 100px; }
+  @media (max-width: 960px) {
+    .container {
+      padding-left: 50px;
+      padding-right: 50px; } }
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 30px;
+      padding-right: 30px; } }
+
+.common__title {
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 38px;
+  font-family: "Georgia", sans-serif;
+  color: #4E5665;
+  text-align: center;
+  margin-bottom: 42px; }
+  .common__title_cuba-autos {
+    margin-bottom: 111px; }
+    @media (max-width: 768px) {
+      .common__title_cuba-autos {
+        margin-bottom: 80px; } }
+
+.common__description {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 28px;
+  font-family: "Helvetica", sans-serif;
+  color: #505050;
+  text-align: justify;
+  margin-bottom: 63px; }
+  .common__description_cuba-about {
+    margin-bottom: 150px; }
+    @media (max-width: 768px) {
+      .common__description_cuba-about {
+        margin-bottom: 80px; } }
+  .common__description_cuba-autos {
+    margin-bottom: 0;
+    padding-bottom: 80px;
+    border-bottom: 1px solid #D0D4D8; }
+  .common__description_cuba-photos {
+    position: relative;
+    margin-bottom: 56px;
+    padding-bottom: 48px; }
+    .common__description_cuba-photos::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      height: 1px;
+      width: 270px;
+      background-color: #D0D4D8; }
+
+.navbar {
+  width: 100%;
+  border-bottom: 1px solid #D0D4D8;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap; }
+  .navbar__container {
+    max-width: 640px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap; }
+    @media (max-width: 960px) {
+      .navbar__container {
+        overflow-x: scroll;
+        flex-wrap: nowrap; } }
+    @media (max-width: 460px) {
+      .navbar__container {
+        justify-content: flex-start; } }
+  .navbar__item {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 63px;
+    font-family: "Helvetica", sans-serif;
+    color: #909090;
+    padding: 0 10px;
+    box-sizing: content-box; }
+    @media (max-width: 960px) {
+      .navbar__item {
+        white-space: nowrap; } }
+    .navbar__item_active, .navbar__item:hover {
+      color: #4E5665;
+      position: relative; }
+      .navbar__item_active::after, .navbar__item:hover::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color: #ECB84C;
+        bottom: 0;
+        left: 0; }
+
+.intro {
+  min-height: 700px;
+  position: relative; }
+  .intro__title {
+    font-size: 200px;
+    font-weight: normal;
+    line-height: 1;
+    font-family: "Times", sans-serif;
+    color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+    @media (max-width: 768px) {
+      .intro__title {
+        font-size: 140px; } }
+    @media (max-width: 460px) {
+      .intro__title {
+        font-size: 80px; } }
+  .intro__sub-title {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1;
+    font-family: "Georgia", sans-serif;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 2;
+    text-align: center; }
+    @media (max-width: 460px) {
+      .intro__sub-title {
+        font-size: 18px; } }
+  .intro__backgrounds {
+    overflow-x: hidden; }
+  .intro__bg {
+    max-height: 700px;
+    z-index: 1; }
+
+.slider-dots {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: flex;
+  z-index: 2; }
+  .slider-dots__dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    margin-right: 10px; }
+    .slider-dots__dot:hover {
+      background-color: #fff; }
+    .slider-dots__dot_active {
+      background-color: #fff; }
+
+.about-cuba {
+  padding-top: 83px;
+  padding-bottom: 125px; }
+  @media (max-width: 768px) {
+    .about-cuba {
+      padding-bottom: 90px; } }
+
+.cuba-place {
+  position: relative; }
+  .cuba-place__photo {
+    max-width: 565px;
+    width: 100%; }
+    @media (max-width: 768px) {
+      .cuba-place__photo {
+        margin: 0 auto;
+        display: block; } }
+
+.cuba-place-card {
+  padding: 40px;
+  max-width: 470px;
+  width: 100%;
+  max-height: 290px;
+  box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  position: absolute;
+  top: 70px;
+  left: 43%; }
+  @media (max-width: 768px) {
+    .cuba-place-card {
+      display: block;
+      position: relative;
+      top: -50px;
+      left: 0;
+      max-height: none;
+      margin: 0 auto; } }
+  @media (max-width: 460px) {
+    .cuba-place-card {
+      top: 0; } }
+  .cuba-place-card::before {
+    content: url("../img/place-card-figure.svg");
+    position: absolute;
+    top: 19px;
+    right: 19px; }
+  .cuba-place-card::after {
+    content: url("../img/place-card-figure.svg");
+    position: absolute;
+    bottom: 19px;
+    left: 19px;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  .cuba-place-card__title {
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 1;
+    font-family: "Georgia", sans-serif;
+    margin-bottom: 16px;
+    color: #4E5665; }
+  .cuba-place-card__description {
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 28px;
+    font-family: "Helvetica", sans-serif;
+    color: #505050; }
+
+.cuba-autos__photo-container {
+  max-width: 1170px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto 60px; }
+  .cuba-autos__photo-container::after {
+    content: url("../img/smooth-line.png");
+    position: absolute;
+    bottom: -20px;
+    left: 0; }
+
+.cuba-autos__cadillac-photo {
+  width: 100%; }
+
+.cuba-photos {
+  padding-top: 80px;
+  padding-bottom: 80px; }
+
+.cuba-gallery {
+  position: relative;
+  min-height: 31.25rem; }
+  .cuba-gallery__forward-btn, .cuba-gallery__backward-btn {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #ECB84C;
+    z-index: 5;
+    cursor: pointer; }
+    .cuba-gallery__forward-btn:hover, .cuba-gallery__backward-btn:hover {
+      background-color: #FFCF6A; }
+    .cuba-gallery__forward-btn::after, .cuba-gallery__backward-btn::after {
+      content: "";
+      background: url("../img/arrow-icon.svg") no-repeat 50% 50%;
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      top: 50%;
+      left: 50%; }
+  .cuba-gallery__forward-btn {
+    right: 25.138%; }
+    .cuba-gallery__forward-btn::after {
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+    @media (max-width: 960px) {
+      .cuba-gallery__forward-btn {
+        right: 16.138%; } }
+    @media (max-width: 768px) {
+      .cuba-gallery__forward-btn {
+        right: 6.138%; } }
+    @media (max-width: 460px) {
+      .cuba-gallery__forward-btn {
+        width: 40px;
+        height: 40px; } }
+  .cuba-gallery__backward-btn {
+    left: 25.138%; }
+    .cuba-gallery__backward-btn::after {
+      -webkit-transform: translate(-50%, -50%) rotate(180deg);
+              transform: translate(-50%, -50%) rotate(180deg); }
+    @media (max-width: 960px) {
+      .cuba-gallery__backward-btn {
+        left: 16.138%; } }
+    @media (max-width: 768px) {
+      .cuba-gallery__backward-btn {
+        left: 6.138%; } }
+    @media (max-width: 460px) {
+      .cuba-gallery__backward-btn {
+        width: 40px;
+        height: 40px; } }
+  .cuba-gallery__item {
+    box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+    .cuba-gallery__item:nth-of-type(1) {
+      max-width: 33.333%;
+      max-height: 19.6875rem;
+      left: 0;
+      z-index: 2; }
+    .cuba-gallery__item:nth-of-type(2) {
+      max-width: 38.888%;
+      max-height: 26.25rem;
+      left: 12.5%;
+      z-index: 3; }
+      @media (max-width: 960px) {
+        .cuba-gallery__item:nth-of-type(2) {
+          max-width: 60%;
+          left: 0; } }
+      @media (max-width: 460px) {
+        .cuba-gallery__item:nth-of-type(2) {
+          max-height: none; } }
+    .cuba-gallery__item:nth-of-type(3) {
+      max-width: 44.444%;
+      max-height: 30rem;
+      left: 27.777%;
+      z-index: 4; }
+      @media (max-width: 960px) {
+        .cuba-gallery__item:nth-of-type(3) {
+          max-width: 60%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); } }
+      @media (max-width: 768px) {
+        .cuba-gallery__item:nth-of-type(3) {
+          max-width: 75%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); } }
+      @media (max-width: 460px) {
+        .cuba-gallery__item:nth-of-type(3) {
+          max-width: 100%;
+          max-height: none; } }
+    .cuba-gallery__item:nth-of-type(4) {
+      max-width: 38.888%;
+      max-height: 26.25rem;
+      right: 12.5%;
+      z-index: 3; }
+      @media (max-width: 960px) {
+        .cuba-gallery__item:nth-of-type(4) {
+          max-width: 60%;
+          right: 0; } }
+    .cuba-gallery__item:nth-of-type(5) {
+      max-width: 33.333%;
+      right: 0;
+      z-index: 2;
+      max-height: 19.6875rem; }
+
+.advantages {
+  padding-top: 83px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #D0D4D8; }
+  .advantages__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    max-width: 813px;
+    width: 100%;
+    margin: 0 auto; }
+  .advantages__read-more-btn {
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 28px;
+    font-family: "Helvetica", sans-serif;
+    color: #ECB84C;
+    padding-left: 5px; }
+    .advantages__read-more-btn:hover {
+      font-weight: bold;
+      text-decoration: underline; }
+
+.advantage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap; }
+  @media (max-width: 460px) {
+    .advantage {
+      margin: 0 20px 30px; } }
+  .advantage__icon {
+    margin-bottom: 36px;
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s; }
+    .advantage__icon:hover {
+      -webkit-transform: scale(1.15);
+              transform: scale(1.15); }
+  .advantage__number {
+    color: #4E5665;
+    margin-bottom: 4px;
+    font-size: 1.375rem;
+    font-weight: normal;
+    line-height: 30px;
+    font-family: "Helvetica", sans-serif; }
+  .advantage__name {
+    color: #505050;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1;
+    font-family: "Helvetica", sans-serif; }
+
+.footer {
+  background-color: #f2f2f2;
+  min-height: 314px;
+  padding: 56px 135px 32px;
+  border-bottom: 1px solid #D8D8D8;
+  position: relative; }
+  @media (max-width: 1200px) {
+    .footer {
+      padding: 50px 50px 30px;
+      min-height: 260px; } }
+  @media (max-width: 960px) {
+    .footer {
+      padding: 50px 15px 30px; } }
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row nowrap; }
+    @media (max-width: 960px) {
+      .footer__container {
+        flex-direction: column; } }
+  .footer__testwork-logo {
+    margin-right: 50px; }
+    @media (max-width: 960px) {
+      .footer__testwork-logo {
+        margin-right: 25px;
+        margin-bottom: 30px; } }
+    @media (max-width: 460px) {
+      .footer__testwork-logo {
+        margin-left: auto;
+        margin-right: 0; } }
+  .footer__sections {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    width: 100%;
+    max-width: 860px; }
+    @media (max-width: 960px) {
+      .footer__sections {
+        margin-bottom: 40px; } }
+    @media (max-width: 460px) {
+      .footer__sections {
+        flex-direction: column; } }
+  .footer__copyright {
+    text-align: center;
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    color: #505050;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 19px;
+    font-family: "Helvetica", sans-serif; }
+
+@media (max-width: 768px) {
+  .footer-section {
+    margin-right: 20px;
+    margin-bottom: 20px; } }
+
+.footer-section__title {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #4E5665;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 20px;
+  font-family: "Helvetica", sans-serif; }
+
+.footer-section__link {
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 19px;
+  font-family: "Helvetica", sans-serif;
+  margin-bottom: 8px;
+  color: #505050;
+  display: block; }
+  .footer-section__link:hover {
+    color: #ECB84C;
+    text-decoration: underline; }
+  .footer-section__link_chat, .footer-section__link_facebook, .footer-section__link_instagram {
+    padding-left: 30px;
+    position: relative; }
+    .footer-section__link_chat::before, .footer-section__link_facebook::before, .footer-section__link_instagram::before {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+  .footer-section__link_chat::before {
+    content: url("../img/chat-logo.svg"); }
+  .footer-section__link_facebook::before {
+    content: url("../img/facebook-logo.svg"); }
+  .footer-section__link_instagram::before {
+    content: url("../img/instagram-logo.svg"); }
