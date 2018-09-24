@@ -13,7 +13,7 @@
         transform: translate(-50%, -50%);
 
         @include respond-to-max($md) {
-            font-size: 170px;
+            font-size: 140px;
         }
         @include respond-to-max($sm) {
             font-size: 80px;
@@ -30,10 +30,10 @@
         left: 50%;
         transform: translateX(-50%);
         z-index: 2;
+        text-align: center;
 
         @include respond-to-max($sm) {
             font-size: 18px;
-            text-align: center;
         }
     }
 

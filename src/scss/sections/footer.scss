@@ -39,6 +39,7 @@
         @include flex(space-between);
 
         width: 100%;
+        max-width: 860px;
 
         @include respond-to-max($lg) {
             margin-bottom: 40px;
