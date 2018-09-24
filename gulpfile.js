@@ -7,6 +7,8 @@ const gulp = require('gulp'),
       del = require('del'),
       imagemin = require('gulp-imagemin'),
       autoprefixer = require('gulp-autoprefixer'),
+      minifyCSS = require('gulp-minify-css'),
+      rename = require('gulp-rename'),
       browserSync = require('browser-sync').create();
 
 gulp.task('pug', function () {
@@ -21,6 +23,8 @@ gulp.task('sass', function () {
       .pipe(sass())
       .pipe(autoprefixer())
       .pipe(debug({title: 'working on'}))
+      .pipe(minifyCSS())
+      .pipe(rename("main.min.css"))
       .pipe(gulp.dest('build/css'))
 });
 
@@ -31,10 +35,15 @@ gulp.task('js', function () {
 });
 
 gulp.task('img', function () {
-  return gulp.src('src/img/**/*.*', {since: gulp.lastRun('img')})
-//   return gulp.src('src/img/**/*.*')
+//   return gulp.src('src/img/**/*.*', {since: gulp.lastRun('img')})
+  return gulp.src('src/img/**/*.*')
       .pipe(debug({title: 'working on'}))
-    //   .pipe(imagemin())
+      .pipe(imagemin({
+        interlaced: true,
+        progressive: true,
+        optimizationLevel: 10,
+        svgoPlugins: [{removeViewBox: true}]
+      }))
       .pipe(gulp.dest('build/img'))
 });
 
