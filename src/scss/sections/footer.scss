@@ -2,10 +2,51 @@
     background-color: $colorGray;
     min-height: 314px;
     padding: 56px 135px 32px;
+    border-bottom: 1px solid #D8D8D8;
     position: relative;
 
+    @include respond-to-max($xl) {
+        padding: 50px 50px 30px;
+        min-height: 260px;
+    }
+
+    @include respond-to-max($lg) {
+        padding: 50px 15px 30px;
+    }
+
     &__container {
-        @include flex(space-between)
+        @include flex(space-between, flex-start, row nowrap);
+
+        @include respond-to-max($lg) {
+            flex-direction: column;
+        }
+    }
+
+    &__testwork-logo {
+        margin-right: 50px;
+
+        @include respond-to-max($lg) {
+            margin-right: 25px;
+            margin-bottom: 30px;
+        }
+        @include respond-to-max($sm) {
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+
+    &__sections {
+        @include flex(space-between);
+
+        width: 100%;
+
+        @include respond-to-max($lg) {
+            margin-bottom: 40px;
+        }
+
+        @include respond-to-max($sm) {
+            flex-direction: column;
+        }
     }
 
     &__copyright {
@@ -21,6 +62,11 @@
 }
 
 .footer-section {
+
+    @include respond-to-max($md) {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
 
     &__title {
         text-transform: uppercase;

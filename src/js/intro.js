@@ -11,7 +11,6 @@ function currentSlide(n) {
 }
 
 function showSlide(n) {
-  var i;
   var backgrounds = document.getElementsByClassName("intro__bg");
   var dots = document.getElementsByClassName("slider-dots__dot");
   var titles = document.getElementsByClassName("intro__title");
@@ -19,7 +18,7 @@ function showSlide(n) {
   if (n > backgrounds.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = backgrounds.length}
 
-  for (i=0; i < backgrounds.length; i++) {
+  for (var i=0; i < backgrounds.length; i++) {
       titles[i].style.display = "none";
   }
   for (i=0; i < backgrounds.length; i++) {
@@ -29,12 +28,12 @@ function showSlide(n) {
      backgrounds[i].style.display = "none";  
   }
   for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" w3-white", "");
+     dots[i].className = dots[i].className.replace(" slider-dots__dot_active", "");
   }
   backgrounds[slideIndex-1].style.display = "block";
   titles[slideIndex -1].style.display = "block";  
   subTitles[slideIndex - 1].style.display = "block";
-  dots[slideIndex-1].className += " w3-white";
+  dots[slideIndex-1].className += " slider-dots__dot_active";
 }
 
 

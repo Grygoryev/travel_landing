@@ -1,21 +1,37 @@
 .navbar {
     width: 100%;
     border-bottom: 1px solid $colorLightGray;
+    padding: 0 20px;
 
     @include flex(center, center);
 
     &__container {
-        max-width: 636px;
+        max-width: 640px;
         width: 100%;
 
         @include flex(space-between, center);
+
+        @include respond-to-max($lg) {
+            overflow-x: scroll;
+            flex-wrap: nowrap;
+        }
+
+        @include respond-to-max($sm) {
+            justify-content: flex-start;
+        }
     }
     &__item {
-        @include font(remy(14), normal, 63px, $fontBase);
+        @include font(14px, normal, 63px, $fontBase);
 
         color: $colorNavItem;
+        padding: 0 10px;
+        box-sizing: content-box;
 
-        &_active {
+        @include respond-to-max($lg) {
+            white-space: nowrap;
+        }
+
+        &_active, &:hover {
             color: $colorNavItem--active;
             position: relative;
 

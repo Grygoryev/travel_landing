@@ -22,28 +22,52 @@
         &:hover {
             background-color: $colorYellowSandy--hover;
         }
+
+        &::after {
+            content: "";
+            background: url("../img/arrow-icon.svg") no-repeat 50% 50%;
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
     }
 
     &__forward-btn {
         right: 25.138%;
 
         &::after {
-            content: url("../img/arrow-icon.svg");
-            position: absolute;
-            top: 50%;
-            left: 50%;
             transform: translate(-50%, -50%);
+        }
+
+        @include respond-to-max($lg) {
+            right: 16.138%;
+        }
+        @include respond-to-max($md) {
+            right: 6.138%;
+        }
+        @include respond-to-max($sm) {
+            width: 40px;
+            height: 40px;
         }
     }
     &__backward-btn {
         left: 25.138%;
 
         &::after {
-            content: url("../img/arrow-icon.svg");
-            position: absolute;
-            top: 50%;
-            left: 50%;
             transform: translate(-50%, -50%) rotate(180deg);
+        }
+
+        @include respond-to-max($lg) {
+            left: 16.138%;
+        }
+        @include respond-to-max($md) {
+            left: 6.138%;
+        }
+        @include respond-to-max($sm) {
+            width: 40px;
+            height: 40px;
         }
     }
 
@@ -67,18 +91,46 @@
             max-height: remy(420);
             left: 12.5%;
             z-index: 3;
+
+            @include respond-to-max($lg) {
+                max-width: 60%;
+                left: 0;
+            }
+            @include respond-to-max($sm) {
+                max-height: none;
+            }
         }
         &:nth-of-type(3) {
             max-width: 44.444%;
             max-height: remy(480);
             left: 27.777%;
             z-index: 4;
+
+            @include respond-to-max($lg) {
+                max-width: 60%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            @include respond-to-max($md) {
+                max-width: 75%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            @include respond-to-max($sm) {
+                max-width: 100%;
+                max-height: none;
+            }
         }
         &:nth-of-type(4) {
             max-width: 38.888%;
             max-height: remy(420);
             right: 12.5%;
             z-index: 3;
+
+            @include respond-to-max($lg) {
+                max-width: 60%;
+                right: 0;
+            }
         }
         &:nth-of-type(5) {
             max-width: 33.333%;

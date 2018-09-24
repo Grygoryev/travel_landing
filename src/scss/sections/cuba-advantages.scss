@@ -27,6 +27,10 @@
 .advantage {
     @include flex(center, center, column nowrap);
 
+    @include respond-to-max($sm) {
+          margin: 0 20px 30px;  
+    }
+
     &__icon {
         margin-bottom: 36px;
         transition: transform 0.4s;

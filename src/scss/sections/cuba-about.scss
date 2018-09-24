@@ -1,6 +1,10 @@
 .about-cuba {
     padding-top: 83px;
     padding-bottom: 125px;
+
+    @include respond-to-max($md) {
+        padding-bottom: 90px;
+    }
 }
 
 .cuba-place {
@@ -9,6 +13,11 @@
     &__photo {
         max-width: 565px;
         width: 100%;
+
+        @include respond-to-max($md) {
+            margin: 0 auto;
+            display: block;
+        }
     }
 }
 
@@ -22,6 +31,19 @@
     position: absolute;
     top: 70px;
     left: 43%;
+
+    @include respond-to-max($md) {
+        display: block;
+        position: relative;
+        top: -50px;
+        left: 0;
+        max-height: none;
+        margin: 0 auto;
+    } 
+
+    @include respond-to-max($sm) {
+        top: 0;
+    }
 
     &::before {
         content: url("../img/place-card-figure.svg");
